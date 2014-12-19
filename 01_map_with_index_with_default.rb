@@ -9,7 +9,7 @@ end
 require 'rspec'
 require 'rspec/autorun'
 
-RSpec.describe '#to_sentence' do
+RSpec.describe '#map_with_index' do
 
   it 'returns an empty array when given an empty array' do
     actual = map_with_index([], 4) do |element, index|
