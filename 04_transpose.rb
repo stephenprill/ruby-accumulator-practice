@@ -2,6 +2,15 @@
 #
 # You can use any methods you like on the input array except `#transpose`
 def transpose(array)
+  return [] if array.empty?
+  result = []
+  array.first.length.times do |i|
+    array.each_with_index do |inner, inner_index|
+      result[i] ||= []
+      result[i] << array[inner_index][i]
+    end
+  end
+  result
 end
 
 require 'rspec'

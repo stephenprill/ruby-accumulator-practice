@@ -2,7 +2,18 @@
 # Then make it so that if you don't pass a delimiter, it just concatenates them all together
 #
 # You can only use the `#each` method on the input array
-
+def join(array, delimiter = "")
+  result = ""
+  i = 1
+  array.each do |item|
+    result += item.to_s
+    unless i == array.length
+      result += delimiter
+    end
+    i += 1
+  end
+  result
+end
 
 require 'rspec'
 require 'rspec/autorun'

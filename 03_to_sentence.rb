@@ -3,6 +3,16 @@
 #
 # You can use any methods you like on the input array
 def to_sentence(array)
+  result = ""
+  array.each.with_index(1) do |element, index|
+    result << element.to_s
+    if index < array.length - 1
+      result << ", "
+    elsif index == array.length - 1
+      result << " and "
+    end
+  end
+  result
 end
 
 require 'rspec'
